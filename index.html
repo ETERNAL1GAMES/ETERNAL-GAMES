@@ -25,24 +25,24 @@
     </div>
 </header>
 
-<section class="banner">
+<div class="banner">
     <div class="banner-content">
         <h1>Welcome to Eternal Games</h1>
         <p>Your ultimate source for gaming news, reviews, and guides.</p>
     </div>
-</section>
+</div>
 
 <section class="featured-news">
     <h2>Latest News</h2>
     <div class="news-grid">
         <div class="news-item">
-            <img src="img/placeholder.jpg" alt="New RPG">
+            <img src="https://via.placeholder.com/350x200" alt="News Image">
             <h3>New RPG Announced!</h3>
             <p>A thrilling adventure awaits in this upcoming title...</p>
             <a href="#" class="read-more">Read More</a>
         </div>
         <div class="news-item">
-            <img src="img/placeholder.jpg" alt="Patch Update">
+            <img src="https://via.placeholder.com/350x200" alt="News Image">
             <h3>Patch 2.0 Released</h3>
             <p>Major updates hit your favorite shooter game...</p>
             <a href="#" class="read-more">Read More</a>
@@ -50,20 +50,37 @@
     </div>
 </section>
 
-<aside class="sidebar">
+<section class="sidebar">
     <h2>Trending</h2>
     <ul>
         <li><a href="#">Top 10 Games of 2025</a></li>
         <li><a href="#">Eternal Games Awards</a></li>
         <li><a href="#">Community Spotlight</a></li>
     </ul>
-</aside>
+</section>
 
 <footer>
-    <p>© 2025 Eternal Games. All rights reserved.</p>
+    <p>&copy; 2025 Eternal Games. All rights reserved.</p>
 </footer>
 
-<script src="js/script.js"></script>
+<!-- كود الجافا سكربت -->
+<script>
+    // تأثير عند التمرير على الأخبار
+    document.addEventListener("DOMContentLoaded", () => {
+        const newsItems = document.querySelectorAll(".news-item");
+
+        newsItems.forEach(item => {
+            item.addEventListener("mouseenter", () => {
+                item.style.transform = "scale(1.02)";
+                item.style.transition = "transform 0.3s";
+            });
+
+            item.addEventListener("mouseleave", () => {
+                item.style.transform = "scale(1)";
+            });
+        });
+    });
+</script>
 
 </body>
 </html>
